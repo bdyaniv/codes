@@ -1,0 +1,32 @@
+#!/usr/bin/perl
+
+package A;
+
+sub new {
+    $class = shift;
+    $self = {
+	name=>"name_" . $class,
+    };
+    
+    return bless $self, $class;
+}
+
+sub my_name {
+    $class = shift;
+    print "I am " . $class->{name} . "\n";
+}
+
+
+package B;
+
+use base qw(A); # works
+#@ISA = ("A"); # works
+
+
+package main;
+
+$a = A->new;
+$a->my_name();
+$b = B->new;
+$b->my_name();
+

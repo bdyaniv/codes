@@ -1,0 +1,19 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+my %kids = (
+    danielle => 1984,
+    eden  =>2010,
+    tal   =>2012,hhhj
+    yaniv =>1976,
+);
+
+sub readHash {
+    my ($ref) = shift;
+    foreach my $e (keys %{$ref}) {
+	print $e . ": " . $ref->{$e} . "\n";
+    }
+
+}

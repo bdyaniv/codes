@@ -1,0 +1,4 @@
+package B;
+
+use base qw(A); # works
+#@ISA = ("A"); # works

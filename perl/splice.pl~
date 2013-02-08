@@ -1,0 +1,6 @@
+@a = qw(eden ben david is a great boy);
+@b = qw(and tal);
+
+@c = splice(@a, 1,2,@b);
+grep {$_=~s/is/are/g} @a;
+print "@a\n";
